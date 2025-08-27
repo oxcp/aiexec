@@ -1,0 +1,18 @@
+models:
+#  - gpt5
+#  - claude-opus-4-1-20250805
+  - gemini-2.5-pro
+#  - claude-3-7-sonnet-20250219
+#  - claude-sonnet-4-20250514
+
+scenarios:
+  - codecomments
+  - codetranslation
+  - completion
+  - erranalysis
+  - explain
+  - generatedoc
+  - optimization
+  - QnA
+  - securitycheck
+  - unittestcase
