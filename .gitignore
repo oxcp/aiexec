@@ -1,0 +1,4 @@
+agents/.vscode/mcp.json
+codegen/.vscode/mcp.json
+codegen/.vscode/launch.json
+codegen/uv.lock
