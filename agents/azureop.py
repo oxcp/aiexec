@@ -1,4 +1,3 @@
-from asyncio import subprocess
 import json
 import os
 import subprocess
@@ -56,7 +55,7 @@ functions = FunctionTool(functions=user_functions)
 #code_interpreter = CodeInterpreterTool()
 
 # You need to login to Azure subscription via Azure CLI and set the environment variables
-project_endpoint = os.getenv("PROJECT_ENDPOINT","https://kacai-3055-resource.services.ai.azure.com/api/projects/kacai-3055")  # Ensure the PROJECT_ENDPOINT environment variable is set
+project_endpoint = os.getenv("PROJECT_ENDPOINT")  # Ensure the PROJECT_ENDPOINT environment variable is set
 # # Create an AIProjectClient instance
 project_client = AIProjectClient(
     endpoint=project_endpoint,
@@ -65,10 +64,11 @@ project_client = AIProjectClient(
 
 sysprompt = """
 You are an Azure operation assistant helping people to automatically perform resources management and application deployment. Generate necessary scripts or code and run it as needed. Please follow:
-1. if the script interacts with Azure, use Azure CLI
-2. if the script needs to login to azure, use service principal without human interaction.
-3. if save the script to a file, or run the script, convert the script to bash shell first
-4. if you need any input from people, just ask for the input
+1. if the generated script interacts with Azure, use Azure CLI
+2. if the generated script needs to login to azure, use service principal without human interaction.
+3. if save the generated script to a file, or run the generated script, convert the generated script to bash shell first
+4. if you cannot directly run the generated script, use the function tool "run_script" to run the script
+5. if you need any input from people, just ask for the input
 """
 
 useexistingagent = False
@@ -147,7 +147,7 @@ with project_client:
                 # # print the last message in messages
 
                 response = project_client.agents.messages.get_last_message_text_by_role(thread.id, "assistant")
-                print(f"Assistant: {response.text.value}")
+                print(f"\nAssistant:\n{response.text.value}")
 
                 userprompt = ""
                 print("------\nUser:")
