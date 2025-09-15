@@ -97,7 +97,7 @@ with project_client:
         print(f"Created thread, ID: {thread.id}")
         
         userprompt = ""
-        print("------\nUser:")
+        print("------\n[User:]")
         while True:
             line = input("")
             userprompt += line  # Continue to build the prompt
@@ -150,10 +150,10 @@ with project_client:
                 # # print the last message in messages
 
                 response = project_client.agents.messages.get_last_message_text_by_role(thread.id, "assistant")
-                print(f"\nAssistant:\n{response.text.value}")
+                print(f"\n[Assistant:]\n{response.text.value}")
 
                 userprompt = ""
-                print("------\nUser:")
+                print("------\n[User:]")
     except Exception as e:
         print(f"Error during agent run: {str(e)}")
     finally:
