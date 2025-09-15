@@ -1,3 +1,6 @@
+# Azure AI Agent to assist people for Azure operations.
+# Usage and more details: https://github.com/oxcp/aiexec/blob/main/agents/azureop.md
+
 import json
 import os
 import subprocess
