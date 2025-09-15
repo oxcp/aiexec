@@ -51,7 +51,7 @@ def run_script(script: str) -> str:
 #--- End of defining user functions ---
 
 
-# Define user functions
+# Define agent function tools
 user_functions = {save_script, run_script}
 # Initialize the FunctionTool with user-defined functions
 functions = FunctionTool(functions=user_functions)
