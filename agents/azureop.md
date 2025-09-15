@@ -13,7 +13,7 @@ Azure AI Agent to assist people for Azure operations.
 
 ## Sample Prompts
 ```
-**[Users:]**
+[Users:]
 With specified docker image which implements a web page, help to create Azure Container Apps to run the docker image and host the web page. You just create the minimum requested resource to finish the task. There is no need to use Log Analytics workspace.
 
 [Assistant:]
@@ -26,7 +26,7 @@ To create the Azure Container App and host a web page using a specified Docker i
 
 Can you provide these details?
 
-**[Users:]**
+[Users:]
 This is the info you may need to perform the task: \
 azure region: eastus \
 azure group name: acapoc \
@@ -72,7 +72,7 @@ Assistant: The Azure Container App has been successfully deployed. You can acces
 
 Let me know if there is anything else you need assistance with!
 
-**[Users:]**
+[Users:]
 exit
 
 ```
