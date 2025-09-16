@@ -1,17 +1,16 @@
-## Description
-Azure AI Agent to assist people for Azure operations.
+# AzureOpAgent: An Azure AI Agent to assist people on Azure operations
 
 ## Features
 - Generate script/code for Azure resource management and workload deployment
 - Use function calls to save and execute script/code
+- General Q&A for Azure operations
 
 ## Source
 - [Source Code](./azureop.py)
 
-## Usage
-- [Usage video](https://oxcp.github.io/ainotes/azureopagent.html)
-
-## Sample Prompts
+## Sample Usage
+- [Video shows an example to deploy apps on Azure Container Apps](https://oxcp.github.io/ainotes/azureopagent.html)
+### Prompts used in the sample
 ```
 [Users:]
 With specified docker image which implements a web page, help to create Azure Container Apps to run the docker image and host the web page. You just create the minimum requested resource to finish the task. There is no need to use Log Analytics workspace.
