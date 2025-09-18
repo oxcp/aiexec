@@ -9,7 +9,9 @@
 - [Source Code](./azureop.py)
 
 ## Sample Usage
-- [Video shows an example to deploy apps on Azure Container Apps](https://oxcp.github.io/ainotes/azureopagent.html)
+
+https://github.com/user-attachments/assets/ecf49f90-b4d7-493d-9c12-6eec7c41a1e8
+
 ### Prompts used in the sample
 ```
 [Users:]
