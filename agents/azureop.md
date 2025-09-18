@@ -10,7 +10,7 @@
 
 ## Sample Usage
 
-https://github.com/user-attachments/assets/ecf49f90-b4d7-493d-9c12-6eec7c41a1e8
+https://github.com/user-attachments/assets/266d751d-1d1b-4295-a7c5-5dca5e19f1ac
 
 ### Prompts used in the sample
 ```
